@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   pkgs,
   ...
@@ -7,7 +8,7 @@
   programs.home-manager.enable = true;
   home.username = "kn100";
   home.homeDirectory = "/home/kn100";
-
+  programs.swaylock.enable = true;
   home.packages = with pkgs; [
     cowsay
     neofetch
@@ -35,7 +36,6 @@
     gnome.file-roller
     htop
   ];
-
   imports = [
     ./home-modules/git.nix
     ./home-modules/theming.nix

@@ -15,8 +15,7 @@
     };
   };
 
-  outputs = {
-    self,
+  outputs = inputs @ {
     nixpkgs,
     home-manager,
     alejandra,
@@ -24,6 +23,7 @@
   }: {
     nixosConfigurations.ratatootie = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+      specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         home-manager.nixosModules.home-manager
@@ -31,6 +31,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.kn100 = import ./home.nix;
+          home-manager.extraSpecialArgs = {inherit inputs;};
         }
         {
           environment.systemPackages = [alejandra.defaultPackage.x86_64-linux];
