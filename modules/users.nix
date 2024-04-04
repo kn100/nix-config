@@ -2,6 +2,6 @@
   users.users.kn100 = {
     isNormalUser = true;
     description = "Kevin";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "dialout"];
   };
 }
