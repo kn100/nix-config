@@ -6,12 +6,12 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Orchis-Green-Dark";
-      package = pkgs.orchis-theme;
+      name = "Adwaita";
+      package = pkgs.gnome.adwaita-icon-theme;
     };
     iconTheme = {
-      name = "Fluent";
-      package = pkgs.fluent-icon-theme;
+      name = "Adwaita";
+      package = pkgs.gnome.adwaita-icon-theme;
     };
   };
 
