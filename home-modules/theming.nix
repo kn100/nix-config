@@ -25,4 +25,9 @@
     name = "Adwaita";
     size = 38;
   };
+
+  dconf = {
+    enable = true;
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  };
 }
